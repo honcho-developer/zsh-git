@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            align-content: center;
+            justify-content: center;
+            height: 100px;
+            background: grey;
+            flex-basis: 100px;
+        }
+        span{
+            background: rgb(80, 201, 80);
+            width: 50px;
+            height: 50px;
+
+        }
+        input{
+            justify-content: center;
+            margin-left: 50px;
+            align-content: center;
+            border-radius: 0px;
+            border: 1px solid white;
+        }
+        h3{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Onigbajumo Gbenga.... first git project</h3>
+        <form>
+            <input type="text"> <span class="submit">submit</span>
+        </form>
+        <p id="crl"></p>     
+    </div>
+    
+    <script>
+        // adding the submit to give the result of the input
+        let input = document.querySelector('input')
+        // console.log(input)
+        let submit = document.querySelector('.submit')
+        submit.addEventListener('click', function(){
+            let result = document.querySelector('#crl')
+            display = input.value
+            result.innerHTML = (`The factorial of ${display} is ${factorialMath(display)}`)
+            // input.value = result.innerHTML
+            // console.log(factorialMath(display))
+        })
+        // let click = function(){
+
+        //     // let result = document.createElement("p")
+        //     // result.textContent = input.value
+        //     // document.querySelector('body').appendChild(result)
+        // }
+
+
+    // calculation for the factorial
+    let factorialMath = function(x){
+        let m = 1
+        for (n = 1; n <=x; n++){
+        m = m*n
+        }
+        return m
+    }
+
+    </script>
+</body>
+</html>
